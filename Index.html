@@ -1,134 +1,838 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AKASH/PORTFOLIO</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akash K S — Backend Engineer · Cloud Specialist · AI Enthusiast</title>
+  <meta name="description" content="Backend Engineer with 4+ years designing scalable APIs, Microservices, AWS cloud systems, and automation pipelines." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-</html>
+<body>
+  <!-- Canvas for particles -->
+  <canvas id="particle-canvas"></canvas>
 
-<header>
-    <div class="navigation">
-        <h1 class="logo">AKASH</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Service</a></li>
-            </ul>
-        </nav>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">[</span>
+        <span class="logo-text">AKASH</span>
+        <span class="logo-bracket">]</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#stack" class="nav-link">Stack</a></li>
+        <li><a href="#journey" class="nav-link">Journey</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#philosophy" class="nav-link">Philosophy</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="mailto:akashks6341@gmail.com" class="nav-cta">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </nav>
 
-    <section id="upper-cont">
-        <div class="container">
-            <div class="upper-cont-right">
-                <h2>Welcome to my website</h2>
-                <p>Thank you for stopping by! This is a great opportunity for me for sharing my skills here!!!.</p>
-                <button>Find out more</button>
-            </div>
-            <div class="upper-cont-left">
-                <h3>Here's more</h3>
-            </div>
-        </div>
-    </section>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#about" class="mob-link">About</a></li>
+      <li><a href="#stack" class="mob-link">Stack</a></li>
+      <li><a href="#journey" class="mob-link">Journey</a></li>
+      <li><a href="#projects" class="mob-link">Projects</a></li>
+      <li><a href="#philosophy" class="mob-link">Philosophy</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+  </div>
 
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="aurora-layer aurora-1"></div>
+    <div class="aurora-layer aurora-2"></div>
+    <div class="aurora-layer aurora-3"></div>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span>
+        <span>Available for new opportunities</span>
+      </div>
+      <h1 class="hero-name reveal-up delay-1">Akash K S</h1>
+      <div class="hero-typewriter reveal-up delay-2">
+        <span class="typewriter-prefix">I build &nbsp;</span>
+        <span class="typewriter-text" id="typewriter"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-sub reveal-up delay-3">
+        Backend Engineer · Cloud Specialist · Automation Engineer · AI Enthusiast<br />
+        <span class="hero-location">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Tamil Nadu, India
+        </span>
+      </p>
+      <div class="hero-actions reveal-up delay-4">
+        <a href="#projects" class="btn-primary">
+          <span>View Work</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn-ghost">Let's Connect</a>
+      </div>
+      <div class="hero-socials reveal-up delay-5">
+        <a href="https://github.com/AKASH-k-s63" target="_blank" rel="noopener" class="social-chip">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/akashks00/" target="_blank" rel="noopener" class="social-chip">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
 
-    <section id="about" class="section">
-        <div class="container">
-            <div class="boxe">
-                <h2>About Me</h2>
-                <p>Hi, My self <b>AKASH</b> I am a software Engineer, Having 2+ years of experience in .net , Angular,
-                    Mysql.</p>
-                <p>I have Completed two projects and worked on many challenging issues. I have upgraded my skills by work
-                    experience by solving various problems.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio">
-        <div class="container">
-            <h2>Portfolio</h2>
-            <hr>
-            <div class="box-grid">
-                <div class="boxes">
-                    <p><b>PROJECTS</b></p>
-                    <div class="portfolio-item">
-                        <img src="portfolio-item-1.jpg" alt="Project 1">
-                        
-                        <h3>TICKETING SYSTEM (TKS)</h3>
-                        <h6>Duration:may 2021 - present </h6>
-                        <h6>Organization:Sysnet System and Solutions Pte Ltd, Singapore</h6>
-                        <h6>Position:Full Stack Developer </h6>
-                        <br>
-                        <br>
-                        <h2>Description</h2>
-                        <p>Multi-tenant Ticketing System designed to run as SaaS in cloud targeting service industries to provide better management and tracking of tickets raised by customers, vendors and partners. This system provides warranty-based service and ad-hoc tickets. This manages the employers schedule and track the progress of tickets by tasks and subtasks, and handles the efforts spent on each ticket. 
-                            Dashboard provides overall status of the tickets for each staff, helpdesk and the management.</p>
-                        <h3>RESPONSIBILITIES: </h3>
-                        <ul>
-                            <li>•UI development using Angular 11, TypeScript. </li>
-                            <li>•Worked with Senior Architect in implementing the framework  </li>
-                            <li>•Implementation of APIs, unit & integration test using Xunit & Postman</li>
-                            <li>•Writing Queries, Stored Procedure </li>
-                            <li>•Deployment of the application, database in different environment from remote</li>
-                        </ul>
-                        <h3>Platforms</h3>
-                        <p>.NET Core, EF Core, MYSQL, Angular 11, TypeScript 3.0, SignalR,  Firebase, Android & IOS </p>
-                    </div>
-                </div>
-                <div class="boxes">
-                    <div class="portfolio-item">
-                        <img src="portfolio-item-2.jpg" alt="Project 2">
-                        
-                        <h3>TEALIOT SOLUTIONS (TEALIOT) </h3>
-                        <h6>Duration:Jun 2022 – Jan 2023 </h6>
-                        <h6>Organization:TealIoT, India. </h6>
-                        <h6>Position:Full Stack Developer (Mobile, API)  </h6>
-                        <br>
-                        <br>
-                        <h2>Description</h2>
-                        <p>Multi-tenant solution for managing IoT devices used to schedule and control the water management for irrigating acres of land. Mobile application is used to monitor and control the number of sprinklers, schedules and zones of the land for watering. 
-                            IoT device (Luva Server) maintains communication with the API Server to provide update of the status, receive changes to settings or schedules. Status updates are updated to mobile app in real-time using SignalR.</p>
-                        <h3>RESPONSIBILITIES: </h3>
-                        <ul>
-                            <li>•UI prototype for approval.</li>
-                            <li>•UI development, Scripting, Testing the Mobile App for Android </li>
-                            <li>•Deployment of the application, database in different environment from remote. </li>
-                        </ul>
-                        <h3>Platforms</h3>
-                        <p>.NET Core, EF Core, MYSQL, Angular 10, TypeScript 3.0, MQTT, SignalR, MailKit, IONIC 4.0, Android & IOS  </p>
-                    </div>
-                </div>
-                <!-- <div class="boxes">
-                    <h3>Gallery 3</h3>
-                    <p>sit amet justo donec enim diam vulputate ut pharetra sit amet aliquam id diam maecenas ultricies
-                        mi eget mauris pharetra
-                    <p>
-                </div> -->
-            </div>
-    </section>
-
-    <section id="contact">
-        <div class="contact" id="form-cont">
-            <h2>Contact us</h2>
-            <p>Contact Me at <a href="akashks6341@gmail.com">Visit me</a></p>
-            <hr>
-            <!-- <form>
-                <div class="input-row">
-                    <input type="Text" id="name" placeholder="Enter your name...">
-                    <input type="Text" id="email" placeholder="Enter your email...">
-                </div>
-                <textarea name="Message" placeholder="Enter your message..."></textarea>
-                <button type="submit" class="btn-submit" name="submit">
-                    Submit</button>
-            </form> -->
-        </div>
-    </section>
-</header>
-
-<footer>
+  <!-- IMPACT DASHBOARD -->
+  <section class="impact" id="impact">
     <div class="container">
-        <p>&copy; 2023 AKASH</p>
+      <div class="impact-grid">
+        <div class="impact-card reveal-up" data-delay="0">
+          <div class="impact-num" data-target="4">0</div>
+          <div class="impact-plus">+</div>
+          <div class="impact-label">Years of Experience</div>
+          <div class="impact-sub">Building production systems</div>
+        </div>
+        <div class="impact-card reveal-up" data-delay="1">
+          <div class="impact-num" data-target="40">0</div>
+          <div class="impact-plus">%</div>
+          <div class="impact-label">Faster APIs</div>
+          <div class="impact-sub">Response time optimization</div>
+        </div>
+        <div class="impact-card reveal-up" data-delay="2">
+          <div class="impact-num" data-target="50">0</div>
+          <div class="impact-plus">%</div>
+          <div class="impact-label">QA Reduction</div>
+          <div class="impact-sub">Through automation engineering</div>
+        </div>
+        <div class="impact-card reveal-up" data-delay="3">
+          <div class="impact-num" data-target="30">0</div>
+          <div class="impact-plus">%</div>
+          <div class="impact-label">Stability Boost</div>
+          <div class="impact-sub">Production system reliability</div>
+        </div>
+        <div class="impact-card reveal-up" data-delay="4">
+          <div class="impact-num" data-target="25">0</div>
+          <div class="impact-plus">%</div>
+          <div class="impact-label">Faster Resolution</div>
+          <div class="impact-sub">Incident response improvement</div>
+        </div>
+      </div>
     </div>
-</footer>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-label reveal-up">About Me</div>
+      <div class="about-grid">
+        <div class="about-left reveal-up delay-1">
+          <h2 class="section-title">Engineering systems that<br /><em>scale, survive, and evolve.</em></h2>
+          <p class="about-body">
+            I'm a Backend Engineer with 4+ years of experience architecting the kind of systems that most developers only read about — distributed microservices, cloud-native APIs, automated pipelines, and infrastructure that stays standing under real production pressure.
+          </p>
+          <p class="about-body">
+            My journey started with curiosity — tearing apart codebases, understanding how systems talk to each other, and asking "why does this break under load?" That curiosity evolved into a disciplined engineering practice: I now design for failure, optimize for scale, and automate everything that shouldn't require human intervention.
+          </p>
+          <p class="about-body">
+            Today, I'm exploring the intersection of <strong>AI agents, LLM integration,</strong> and <strong>workflow automation</strong> — building intelligent systems that don't just respond to commands, but reason, adapt, and act.
+          </p>
+          <div class="about-tags">
+            <span class="tag">.NET Core</span>
+            <span class="tag">AWS</span>
+            <span class="tag">Microservices</span>
+            <span class="tag">AI Agents</span>
+            <span class="tag">Automation</span>
+            <span class="tag">Cloud Native</span>
+          </div>
+        </div>
+        <div class="about-right reveal-up delay-2">
+          <div class="identity-card">
+            <div class="id-header">
+              <span class="id-badge">SDE</span>
+              <span class="id-status">
+                <span class="pulse-dot"></span> Active
+              </span>
+            </div>
+            <div class="id-avatar">
+              <div class="avatar-ring"></div>
+              <div class="avatar-core">AKS</div>
+            </div>
+            <div class="id-name">Akash K S</div>
+            <div class="id-role">Backend Engineer</div>
+            <div class="id-stats">
+              <div class="id-stat">
+                <span class="id-stat-val">3</span>
+                <span class="id-stat-key">Companies</span>
+              </div>
+              <div class="id-stat">
+                <span class="id-stat-val">10+</span>
+                <span class="id-stat-key">Tech Stack</span>
+              </div>
+              <div class="id-stat">
+                <span class="id-stat-val">3</span>
+                <span class="id-stat-key">Projects</span>
+              </div>
+            </div>
+            <div class="id-footer">Tamil Nadu, India</div>
+          </div>
+          <div class="what-i-bring">
+            <h4>What I Bring To A Team</h4>
+            <ul>
+              <li>
+                <span class="bring-icon">⚡</span>
+                <div>
+                  <strong>Production-First Thinking</strong>
+                  <p>I treat every line of code as something that will face real traffic, real failures, real users.</p>
+                </div>
+              </li>
+              <li>
+                <span class="bring-icon">🔧</span>
+                <div>
+                  <strong>Automation Instinct</strong>
+                  <p>If it can be automated, it will be. Manual processes are engineering debt.</p>
+                </div>
+              </li>
+              <li>
+                <span class="bring-icon">🧠</span>
+                <div>
+                  <strong>Systems Thinking</strong>
+                  <p>I zoom out before zooming in — understanding how components interact before touching any code.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVOLUTION STORY -->
+  <section class="evolution" id="evolution">
+    <div class="container">
+      <div class="section-label reveal-up">Career Progression</div>
+      <h2 class="section-title center reveal-up delay-1">The Engineer's Evolution</h2>
+      <div class="evolution-track">
+        <div class="evo-node reveal-up" data-delay="0">
+          <div class="evo-icon">🔍</div>
+          <div class="evo-label">Curious Developer</div>
+          <div class="evo-desc">Dissecting systems, chasing root causes</div>
+        </div>
+        <div class="evo-arrow">→</div>
+        <div class="evo-node reveal-up" data-delay="1">
+          <div class="evo-icon">🏗️</div>
+          <div class="evo-label">Full Stack Dev</div>
+          <div class="evo-desc">Building end-to-end applications</div>
+        </div>
+        <div class="evo-arrow">→</div>
+        <div class="evo-node reveal-up" data-delay="2">
+          <div class="evo-icon">⚙️</div>
+          <div class="evo-label">Backend Engineer</div>
+          <div class="evo-desc">Scalable APIs, microservices at core</div>
+        </div>
+        <div class="evo-arrow">→</div>
+        <div class="evo-node reveal-up" data-delay="3">
+          <div class="evo-icon">☁️</div>
+          <div class="evo-label">Cloud Specialist</div>
+          <div class="evo-desc">AWS, distributed cloud systems</div>
+        </div>
+        <div class="evo-arrow">→</div>
+        <div class="evo-node reveal-up" data-delay="4">
+          <div class="evo-icon">🤖</div>
+          <div class="evo-label">Automation Engineer</div>
+          <div class="evo-desc">CI/CD, testing, intelligent pipelines</div>
+        </div>
+        <div class="evo-arrow">→</div>
+        <div class="evo-node active reveal-up" data-delay="5">
+          <div class="evo-icon">✨</div>
+          <div class="evo-label">AI-Driven Engineer</div>
+          <div class="evo-desc">LLMs, agents, intelligent systems</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="stack" id="stack">
+    <div class="container">
+      <div class="section-label reveal-up">Technology Arsenal</div>
+      <h2 class="section-title center reveal-up delay-1">Tools I Wield Daily</h2>
+      <div class="bento-grid">
+        <div class="bento-card bento-wide reveal-up" data-delay="0">
+          <div class="bento-tag">Core Backend</div>
+          <h3 class="bento-title">.NET Ecosystem</h3>
+          <p class="bento-desc">My primary weapons for building robust, high-performance backend systems at scale.</p>
+          <div class="tech-pills">
+            <span class="tech-pill primary">.NET Core</span>
+            <span class="tech-pill primary">ASP.NET Core</span>
+            <span class="tech-pill">C#</span>
+            <span class="tech-pill">Entity Framework</span>
+            <span class="tech-pill">Dapper</span>
+            <span class="tech-pill">REST APIs</span>
+            <span class="tech-pill">Microservices</span>
+          </div>
+        </div>
+        <div class="bento-card reveal-up" data-delay="1">
+          <div class="bento-tag">Cloud</div>
+          <h3 class="bento-title">AWS</h3>
+          <p class="bento-desc">Cloud-native architecture and infrastructure management.</p>
+          <div class="tech-pills">
+            <span class="tech-pill accent">EC2</span>
+            <span class="tech-pill accent">Lambda</span>
+            <span class="tech-pill accent">Athena</span>
+            <span class="tech-pill accent">CloudWatch</span>
+            <span class="tech-pill accent">API Gateway</span>
+          </div>
+        </div>
+        <div class="bento-card reveal-up" data-delay="2">
+          <div class="bento-tag">Database</div>
+          <h3 class="bento-title">Data Layer</h3>
+          <p class="bento-desc">Query optimization, schema design, performance tuning.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">SQL Server</span>
+            <span class="tech-pill">MySQL</span>
+          </div>
+        </div>
+        <div class="bento-card reveal-up" data-delay="3">
+          <div class="bento-tag">DevOps</div>
+          <h3 class="bento-title">Delivery Pipeline</h3>
+          <p class="bento-desc">Containerized deployments and CI/CD engineering.</p>
+          <div class="tech-pills">
+            <span class="tech-pill secondary">Docker</span>
+            <span class="tech-pill secondary">Kubernetes</span>
+            <span class="tech-pill secondary">CI/CD</span>
+            <span class="tech-pill secondary">Git</span>
+          </div>
+        </div>
+        <div class="bento-card reveal-up" data-delay="4">
+          <div class="bento-tag">Frontend</div>
+          <h3 class="bento-title">UI Layer</h3>
+          <p class="bento-desc">Angular-powered enterprise interfaces and dashboards.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">Angular</span>
+            <span class="tech-pill">TypeScript</span>
+          </div>
+        </div>
+        <div class="bento-card bento-wide reveal-up" data-delay="5">
+          <div class="bento-tag">Testing & Protocols</div>
+          <h3 class="bento-title">Quality & Connectivity</h3>
+          <p class="bento-desc">Automated testing, API validation, real-time communication and document workflows.</p>
+          <div class="tech-pills">
+            <span class="tech-pill">Cypress</span>
+            <span class="tech-pill">Postman</span>
+            <span class="tech-pill">Swagger</span>
+            <span class="tech-pill">SignalR</span>
+            <span class="tech-pill">MQTT</span>
+            <span class="tech-pill">MailKit</span>
+            <span class="tech-pill">iTextSharp</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE EXPERTISE -->
+  <section class="architecture" id="architecture">
+    <div class="container">
+      <div class="section-label reveal-up">System Design</div>
+      <h2 class="section-title center reveal-up delay-1">Architecture Expertise</h2>
+      <p class="section-sub center reveal-up delay-2">I don't just write code — I design systems. Every project starts with understanding how components will communicate, fail, recover, and scale.</p>
+      <div class="arch-grid">
+        <div class="arch-card reveal-up" data-delay="0">
+          <div class="arch-icon">⬛</div>
+          <h3>3-Layer Architecture</h3>
+          <p>Presentation, Business Logic, Data Access — cleanly separated for maintainability and testability.</p>
+        </div>
+        <div class="arch-card reveal-up" data-delay="1">
+          <div class="arch-icon">🏛️</div>
+          <h3>N-Tier Architecture</h3>
+          <p>Enterprise-grade multi-tier systems with clear separation of concerns and independent scaling.</p>
+        </div>
+        <div class="arch-card reveal-up" data-delay="2">
+          <div class="arch-icon">🔗</div>
+          <h3>Microservices</h3>
+          <p>Distributed service design with independent deployability, bounded contexts and fault isolation.</p>
+        </div>
+        <div class="arch-card reveal-up" data-delay="3">
+          <div class="arch-icon">📡</div>
+          <h3>Event-Driven Systems</h3>
+          <p>Asynchronous, decoupled architectures using message queues, SignalR, and MQTT protocols.</p>
+        </div>
+        <div class="arch-card reveal-up" data-delay="4">
+          <div class="arch-icon">🚪</div>
+          <h3>API Gateway Patterns</h3>
+          <p>Centralized ingress, routing, rate limiting, and authentication for distributed service fleets.</p>
+        </div>
+        <div class="arch-card reveal-up" data-delay="5">
+          <div class="arch-icon">📈</div>
+          <h3>Scalable Backend Design</h3>
+          <p>Horizontal scaling strategies, caching layers, and performance profiling under production load.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFESSIONAL JOURNEY TIMELINE -->
+  <section class="journey" id="journey">
+    <div class="container">
+      <div class="section-label reveal-up">Work Experience</div>
+      <h2 class="section-title center reveal-up delay-1">Professional Journey</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal-up" data-delay="0">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-meta">
+              <span class="tl-period">Aug 2025 – Present</span>
+              <span class="tl-badge current">Current</span>
+            </div>
+            <h3 class="tl-role">Software Engineer</h3>
+            <div class="tl-company">US Technologies</div>
+            <p class="tl-summary">Leading production stability initiatives and automation engineering for critical client-facing systems. Driving performance optimization and security hardening across AWS cloud infrastructure.</p>
+            <div class="tl-achievements">
+              <div class="achievement">
+                <span class="ach-num">30%</span>
+                <span class="ach-label">System stability improvement</span>
+              </div>
+              <div class="achievement">
+                <span class="ach-num">40%</span>
+                <span class="ach-label">API response time reduction</span>
+              </div>
+              <div class="achievement">
+                <span class="ach-num">50%</span>
+                <span class="ach-label">Manual QA effort reduction via Cypress</span>
+              </div>
+            </div>
+            <div class="tl-tags">
+              <span>.NET Core</span><span>AWS Athena</span><span>Cypress</span><span>Production Support</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal-up" data-delay="1">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-meta">
+              <span class="tl-period">Jun 2024 – Aug 2025</span>
+            </div>
+            <h3 class="tl-role">Software Developer</h3>
+            <div class="tl-company">Muthoottu Infotech Pvt Ltd</div>
+            <p class="tl-summary">Designed and shipped scalable REST APIs and microservices for financial domain applications. Optimized SQL query performance and architected Angular-powered enterprise dashboards.</p>
+            <div class="tl-achievements">
+              <div class="achievement">
+                <span class="ach-num">35%</span>
+                <span class="ach-label">Application performance improvement</span>
+              </div>
+              <div class="achievement">
+                <span class="ach-num">25%</span>
+                <span class="ach-label">Incident resolution time reduced</span>
+              </div>
+            </div>
+            <div class="tl-tags">
+              <span>Microservices</span><span>SQL Optimization</span><span>Angular</span><span>REST APIs</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal-up" data-delay="2">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+          </div>
+          <div class="tl-content">
+            <div class="tl-meta">
+              <span class="tl-period">Feb 2022 – Jun 2024</span>
+            </div>
+            <h3 class="tl-role">Full Stack Developer</h3>
+            <div class="tl-company">Glareal Software Solutions Pvt Ltd</div>
+            <p class="tl-summary">Built full stack enterprise applications from ground up — backend APIs, data management dashboards, and production support across multiple client projects. Foundation of my systems thinking.</p>
+            <div class="tl-tags">
+              <span>Full Stack</span><span>Enterprise APIs</span><span>Dashboard Development</span><span>Production Support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-label reveal-up">Featured Work</div>
+      <h2 class="section-title center reveal-up delay-1">Projects That Ship</h2>
+      <p class="section-sub center reveal-up delay-2">Not side projects. Real systems solving real problems for real users in production.</p>
+      <div class="projects-grid">
+        <div class="project-card reveal-up" data-delay="0">
+          <div class="proj-header">
+            <div class="proj-number">01</div>
+            <div class="proj-impact">−40% Support Issues</div>
+          </div>
+          <h3 class="proj-title">Enterprise Workflow & Access Management System</h3>
+          <p class="proj-desc">A unified platform replacing fragmented internal tooling — combining ticket management, workflow orchestration, role-based access control, and immutable audit logging into a single coherent system.</p>
+          <div class="proj-features">
+            <div class="proj-feature">
+              <span class="feat-icon">🔄</span>
+              <span>Workflow Automation Engine</span>
+            </div>
+            <div class="proj-feature">
+              <span class="feat-icon">🎟️</span>
+              <span>Ticket Management System</span>
+            </div>
+            <div class="proj-feature">
+              <span class="feat-icon">🔐</span>
+              <span>Role-Based Access Control</span>
+            </div>
+            <div class="proj-feature">
+              <span class="feat-icon">📋</span>
+              <span>Immutable Audit Logging</span>
+            </div>
+          </div>
+          <div class="proj-impact-bar">
+            <span>Support issue reduction</span>
+            <div class="impact-bar">
+              <div class="impact-fill" style="--w: 40%"></div>
+              <span>40%</span>
+            </div>
+          </div>
+          <div class="proj-tags">
+            <span>.NET Core</span><span>SQL Server</span><span>REST API</span><span>Microservices</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-delay="1">
+          <div class="proj-header">
+            <div class="proj-number">02</div>
+            <div class="proj-impact">+30% Report Speed</div>
+          </div>
+          <h3 class="proj-title">Financial Management System</h3>
+          <p class="proj-desc">End-to-end financial platform handling expense management, multi-level workflow approvals, and real-time reporting — built as a microservices architecture for independent scaling of each domain.</p>
+          <div class="proj-features">
+            <div class="proj-feature">
+              <span class="feat-icon">💰</span>
+              <span>Expense Management Engine</span>
+            </div>
+            <div class="proj-feature">
+              <span class="feat-icon">📊</span>
+              <span>Real-Time Financial Reporting</span>
+            </div>
+            <div class="proj-feature">
+              <span class="feat-icon">✅</span>
+              <span>Multi-Level Workflow Approvals</span>
+            </div>
+            <div class="proj-feature">
+              <span class="feat-icon">🏗️</span>
+              <span>Microservices Architecture</span>
+            </div>
+          </div>
+          <div class="proj-impact-bar">
+            <span>Reporting speed improvement</span>
+            <div class="impact-bar">
+              <div class="impact-fill" style="--w: 30%"></div>
+              <span>30%</span>
+            </div>
+          </div>
+          <div class="proj-tags">
+            <span>Microservices</span><span>Angular</span><span>SQL Optimization</span><span>iTextSharp</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-delay="2">
+          <div class="proj-header">
+            <div class="proj-number">03</div>
+            <div class="proj-impact">−25% Water Usage</div>
+          </div>
+          <h3 class="proj-title">IoT Based Irrigation Platform</h3>
+          <p class="proj-desc">An intelligent multi-tenant irrigation management system leveraging MQTT for device communication, SignalR for real-time dashboard updates, and sensor-driven automation for precision agriculture.</p>
+          <div class="proj-features">
+            <div class="proj-feature">
+              <span class="feat-icon">📡</span>
+              <span>MQTT Device Communication</span>
+            </div>
+            <div class="proj-feature">
+              <span class="feat-icon">⚡</span>
+              <span>SignalR Real-Time Monitoring</span>
+            </div>
+            <div class="proj-feature">
+              <span class="feat-icon">🌱</span>
+              <span>Sensor-Driven Automation</span>
+            </div>
+            <div class="proj-feature">
+              <span class="feat-icon">🏢</span>
+              <span>Multi-Tenant Architecture</span>
+            </div>
+          </div>
+          <div class="proj-impact-bar">
+            <span>Water consumption reduction</span>
+            <div class="impact-bar">
+              <div class="impact-fill" style="--w: 25%"></div>
+              <span>25%</span>
+            </div>
+          </div>
+          <div class="proj-tags">
+            <span>MQTT</span><span>SignalR</span><span>IoT</span><span>Multi-Tenant</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGINEERING PHILOSOPHY -->
+  <section class="philosophy" id="philosophy">
+    <div class="container">
+      <div class="section-label reveal-up">Principles</div>
+      <h2 class="section-title center reveal-up delay-1">Engineering Philosophy</h2>
+      <div class="philosophy-grid">
+        <div class="phil-card reveal-up" data-delay="0">
+          <div class="phil-num">01</div>
+          <h3>Design for Failure</h3>
+          <p>Every system will fail. Great engineering anticipates failure modes, builds graceful degradation, and ensures recovery is faster than the incident itself.</p>
+        </div>
+        <div class="phil-card reveal-up" data-delay="1">
+          <div class="phil-num">02</div>
+          <h3>Automate Ruthlessly</h3>
+          <p>If a human is doing it more than twice, it's a process waiting to be automated. Automation is not laziness — it's engineering discipline.</p>
+        </div>
+        <div class="phil-card reveal-up" data-delay="2">
+          <div class="phil-num">03</div>
+          <h3>Measure Everything</h3>
+          <p>Opinions are cheap. Metrics are truth. If you can't measure it, you can't improve it. Observability is a first-class engineering requirement.</p>
+        </div>
+        <div class="phil-card reveal-up" data-delay="3">
+          <div class="phil-num">04</div>
+          <h3>Ship, Then Iterate</h3>
+          <p>Perfect is the enemy of deployed. Deliver working systems, observe real behavior, and iterate based on evidence — not assumptions.</p>
+        </div>
+        <div class="phil-card reveal-up" data-delay="4">
+          <div class="phil-num">05</div>
+          <h3>APIs Are Contracts</h3>
+          <p>A REST API is a promise to your consumers. Breaking that contract breaks trust. Version thoughtfully, deprecate gracefully, document obsessively.</p>
+        </div>
+        <div class="phil-card reveal-up" data-delay="5">
+          <div class="phil-num">06</div>
+          <h3>Understand the Why</h3>
+          <p>Before touching a system, understand its purpose. Code without context creates technical debt. Engineering with intent creates systems that last.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTION ENGINEERING -->
+  <section class="production" id="production">
+    <div class="container">
+      <div class="section-label reveal-up">Production Engineering</div>
+      <h2 class="section-title center reveal-up delay-1">How I Handle Production</h2>
+      <div class="prod-grid">
+        <div class="prod-card reveal-up" data-delay="0">
+          <div class="prod-icon">🔥</div>
+          <h3>Incident Response</h3>
+          <p>Structured triage, root-cause analysis, and systematic remediation. I've reduced incident resolution time by 25% through better observability and faster diagnosis workflows.</p>
+        </div>
+        <div class="prod-card reveal-up" data-delay="1">
+          <div class="prod-icon">📊</div>
+          <h3>Log Analysis at Scale</h3>
+          <p>Using AWS Athena to run SQL-powered queries across terabytes of log data — turning raw noise into actionable intelligence for debugging and anomaly detection.</p>
+        </div>
+        <div class="prod-card reveal-up" data-delay="2">
+          <div class="prod-icon">🛡️</div>
+          <h3>Security & Certificates</h3>
+          <p>SSL certificate lifecycle management, security patching, and deployment hardening across cloud infrastructure — keeping systems compliant and protected.</p>
+        </div>
+        <div class="prod-card reveal-up" data-delay="3">
+          <div class="prod-icon">⚡</div>
+          <h3>Performance Engineering</h3>
+          <p>Profiling bottlenecks, optimizing SQL queries, tuning API response times — delivered 40% API performance improvement through systematic measurement and optimization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTOMATION & AI JOURNEY -->
+  <section class="ai-journey" id="ai">
+    <div class="container">
+      <div class="section-label reveal-up">Automation & AI</div>
+      <h2 class="section-title center reveal-up delay-1">The Automation Mindset</h2>
+      <div class="ai-grid">
+        <div class="ai-card reveal-up" data-delay="0">
+          <div class="ai-step">Phase 1</div>
+          <h3>Test Automation</h3>
+          <p>Started with Cypress — automated end-to-end test suites that eliminated 50% of manual QA effort and enabled continuous delivery confidence.</p>
+          <div class="ai-tag">Cypress · CI/CD · Quality Gates</div>
+        </div>
+        <div class="ai-card reveal-up" data-delay="1">
+          <div class="ai-step">Phase 2</div>
+          <h3>Workflow Automation</h3>
+          <p>Designed enterprise workflow engines that replaced manual approval chains — turning multi-day processes into automated, auditable, sub-hour flows.</p>
+          <div class="ai-tag">Workflow Engines · Event-Driven · Business Process</div>
+        </div>
+        <div class="ai-card reveal-up" data-delay="2">
+          <div class="ai-step">Phase 3</div>
+          <h3>Cloud Automation</h3>
+          <p>CI/CD pipelines, Docker container orchestration, Kubernetes deployments — infrastructure that provisions, deploys, and heals itself.</p>
+          <div class="ai-tag">Docker · Kubernetes · CI/CD Pipelines</div>
+        </div>
+        <div class="ai-card active reveal-up" data-delay="3">
+          <div class="ai-step">Now →</div>
+          <h3>AI Agent Systems</h3>
+          <p>Exploring LLM integration, AI agent architectures, and intelligent workflow automation — the frontier where software starts to reason.</p>
+          <div class="ai-tag">LLM Integration · AI Agents · Intelligent Automation</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRENT FOCUS -->
+  <section class="focus" id="focus">
+    <div class="container">
+      <div class="section-label reveal-up">Current Focus</div>
+      <h2 class="section-title center reveal-up delay-1">What I'm Building Toward</h2>
+      <div class="focus-grid">
+        <div class="focus-card reveal-up" data-delay="0">
+          <div class="focus-icon">🤖</div>
+          <h3>AI Agents</h3>
+          <p>Building autonomous systems that perceive, reason, and act — beyond simple chatbots into real agentic workflows.</p>
+          <div class="focus-progress">
+            <div class="fp-bar" style="--w: 45%"></div>
+          </div>
+          <span class="fp-label">Active exploration</span>
+        </div>
+        <div class="focus-card reveal-up" data-delay="1">
+          <div class="focus-icon">🔗</div>
+          <h3>LLM Integration</h3>
+          <p>Embedding large language models into backend services — intelligent APIs that understand context, not just commands.</p>
+          <div class="focus-progress">
+            <div class="fp-bar" style="--w: 40%"></div>
+          </div>
+          <span class="fp-label">Active exploration</span>
+        </div>
+        <div class="focus-card reveal-up" data-delay="2">
+          <div class="focus-icon">⚡</div>
+          <h3>Workflow Automation</h3>
+          <p>Designing intelligent automation pipelines that adapt — not just scripted sequences but systems that learn from patterns.</p>
+          <div class="focus-progress">
+            <div class="fp-bar" style="--w: 70%"></div>
+          </div>
+          <span class="fp-label">Strong foundation</span>
+        </div>
+        <div class="focus-card reveal-up" data-delay="3">
+          <div class="focus-icon">☁️</div>
+          <h3>Cloud Native Architecture</h3>
+          <p>Pushing deeper into serverless, event-driven, and cloud-native patterns for systems that scale without intervention.</p>
+          <div class="focus-progress">
+            <div class="fp-bar" style="--w: 65%"></div>
+          </div>
+          <span class="fp-label">Growing expertise</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUTURE VISION -->
+  <section class="vision" id="vision">
+    <div class="vision-aurora"></div>
+    <div class="container">
+      <div class="section-label reveal-up">Future Vision</div>
+      <div class="vision-content reveal-up delay-1">
+        <h2 class="vision-title">The future belongs to engineers who can make software think.</h2>
+        <p class="vision-body">
+          Software engineering is at an inflection point. The next decade won't be about writing more code — it'll be about designing systems that write code, orchestrate workflows, and make decisions. I'm positioning myself at that intersection: deep backend engineering foundations combined with AI agent architecture, cloud-native design, and intelligent automation.
+        </p>
+        <p class="vision-body">
+          My goal is to build engineering systems that don't just respond to inputs — they anticipate, adapt, and evolve. To create infrastructure that isn't just reliable, but intelligent. To be the engineer who bridges traditional software excellence with the emerging world of AI-native architecture.
+        </p>
+        <div class="vision-pillars">
+          <div class="vision-pillar">
+            <span class="vp-icon">🏗️</span>
+            <span>Intelligent Systems</span>
+          </div>
+          <div class="vision-pillar">
+            <span class="vp-icon">☁️</span>
+            <span>Cloud Native</span>
+          </div>
+          <div class="vision-pillar">
+            <span class="vp-icon">🤖</span>
+            <span>AI-First Engineering</span>
+          </div>
+          <div class="vision-pillar">
+            <span class="vp-icon">⚡</span>
+            <span>Zero-Ops Automation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-label reveal-up">Contact</div>
+      <h2 class="section-title center reveal-up delay-1">Let's Build Something</h2>
+      <p class="section-sub center reveal-up delay-2">Open to new roles, engineering collaborations, and conversations about cloud, backend systems, and AI-driven automation.</p>
+      <div class="contact-grid reveal-up delay-3">
+        <a href="mailto:akashks6341@gmail.com" class="contact-card">
+          <div class="cc-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="cc-text">
+            <span class="cc-label">Email</span>
+            <span class="cc-value">akashks6341@gmail.com</span>
+          </div>
+          <div class="cc-arrow">→</div>
+        </a>
+        <a href="https://github.com/AKASH-k-s63" target="_blank" rel="noopener" class="contact-card">
+          <div class="cc-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </div>
+          <div class="cc-text">
+            <span class="cc-label">GitHub</span>
+            <span class="cc-value">AKASH-k-s63</span>
+          </div>
+          <div class="cc-arrow">→</div>
+        </a>
+        <a href="https://www.linkedin.com/in/akashks00/" target="_blank" rel="noopener" class="contact-card">
+          <div class="cc-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div class="cc-text">
+            <span class="cc-label">LinkedIn</span>
+            <span class="cc-value">akashks00</span>
+          </div>
+          <div class="cc-arrow">→</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo"><span class="logo-bracket">[</span>AKS<span class="logo-bracket">]</span></span>
+        <span class="footer-copy">Akash K S · Backend Engineer · Tamil Nadu, India</span>
+        <span class="footer-copy">Built with precision. Deployed with confidence.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="back-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
