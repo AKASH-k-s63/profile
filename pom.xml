@@ -11,8 +11,8 @@
 
     <properties>
         <!-- SonarQube project metadata -->
-        <sonar.projectKey>AKASH-k-s63</sonar.projectKey>
-        <sonar.projectName>AKASH Frontend Project</sonar.projectName>
+        <sonar.projectKey>Profile</sonar.projectKey>
+        <sonar.projectName>Profile</sonar.projectName>
         <sonar.projectVersion>1.0</sonar.projectVersion>
         <!-- Point to your source files -->
         <sonar.sources>.</sonar.sources>
