@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example.frontend</groupId>
+    <artifactId>AKASH-k-s63</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <!-- SonarQube project metadata -->
+        <sonar.projectKey>AKASH-k-s63</sonar.projectKey>
+        <sonar.projectName>AKASH Frontend Project</sonar.projectName>
+        <sonar.projectVersion>1.0</sonar.projectVersion>
+        <!-- Point to your source files -->
+        <sonar.sources>.</sonar.sources>
+        <sonar.language>js</sonar.language>
+        <sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <!-- SonarQube Maven Plugin -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.1.2184</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
